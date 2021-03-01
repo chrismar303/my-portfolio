@@ -1,5 +1,7 @@
 import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import Button from 'react-bulma-components/lib/components/button';
+
 
 function App() {
   return (
@@ -9,6 +11,7 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
+        <Button color='primary'>Press Me Chris!</Button>
         <a
           className="App-link"
           href="https://reactjs.org"
