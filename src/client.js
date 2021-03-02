@@ -1,6 +1,6 @@
 import sanityClient from '@sanity/client';
 
-export default SanityClient({
+export default sanityClient({
   projectId: 'wdj97s84',
   dataset: 'production'
 });
