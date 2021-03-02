@@ -21,7 +21,7 @@ const Post = () => {
             }`)
             .then(data => setPostData(data))
             .catch(console.error);
-    });
+    }, [postData]);
     
     return (
         <main className="bg-green-100 min-h-screen p-12">
