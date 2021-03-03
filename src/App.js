@@ -5,6 +5,7 @@ import Post from './components/Post';
 import Project from './components/Project';
 import SinglePost from './components/SinglePost';
 import AppNavbar from './components/AppNavbar';
+import Contact from './components/Contact';
 import Footer from './components/Footer';
 import './App.scss';
 
@@ -19,6 +20,7 @@ function App() {
         <Route component={SinglePost} path='/post/:slug' />
         <Route component={Post} path='/post' />
         <Route component={Project} path='/projects' />
+        <Route component={Contact} path='/contact' />
       </Switch>
       <Footer />
     </Router>
