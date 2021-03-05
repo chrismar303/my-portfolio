@@ -11,6 +11,7 @@ const Project = () => {
             description,
             projectType,
             link,
+            github,
             tags
         }`)
         .then(data => setProjectsData(data))
@@ -53,10 +54,12 @@ function ProjectItem({ project }) {
                 <p className="text-md text-gray-700 leading-snug mt-2">{project.description}</p>
                 {/* links */}
                 <div className="flex my-4 text-center ">
-                    <a href="#" className="w-1/2 font-semibold text-green-500 border-green-500 border rounded-sm px-4 py-2 hover:bg-green-500 hover:text-white transition ease-in">
-                        Github
-                    </a>
-                    <a href={project.link} className="w-1/2 font-semibold text-red-500 border-red-500 border rounded-sm px-4 py-2 hover:bg-red-500 hover:text-white transition ease-in" alt={project.title} target="_blank" rel="noopener noreferrer">
+                    {project?.github && 
+                        <a href={project.github} className="flex-1 font-semibold text-green-500 border-green-500 border rounded-sm px-4 py-2 hover:bg-green-500 hover:text-white transition ease-in" alt="github" target="_blank" rel="noopener noreferrer">
+                            Github
+                        </a>
+                     }
+                    <a href={project.link} className="flex-1 font-semibold text-red-500 border-red-500 border rounded-sm px-4 py-2 hover:bg-red-500 hover:text-white transition ease-in" alt={project.title} target="_blank" rel="noopener noreferrer">
                         Demo
                     </a>
                 </div>
