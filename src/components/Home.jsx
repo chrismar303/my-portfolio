@@ -1,11 +1,33 @@
+import { NavLink } from 'react-router-dom';
 import backgroundImg from '../landing.jpg';
 
 const Home = () => {
     return (
-        <main>
-            <img className="absolute object-cover w-full h-full " src={backgroundImg} alt="landing background"/>
-            <section className="relative flex justify-center min-h-screen pt-12 lg:pt-64 px-8 bg-gray-800 bg-opacity-40">
-                <h1 className="text-6xl font-bold text-red-600 sticks leading-none lg:leading-snug home-name">I Am Chrismar</h1>
+        <main className="px-6 lg:p-0">
+            <section className="md:flex">
+                {/* left / top */}
+                <div className="flex items-center justify-center w-full py-8 md:h-128 md:w-1/2">
+                    <div className="max-w-xl">
+                        <h1 className="text-2xl font-semibold text-gray-800 md:text-3xl lg:text-4xl">Chrismar</h1>
+                        <h4 className="text-gray-400"><em>Developer and <span className="text-red-600">Dream-builder</span></em></h4>
+                        <p className="mt-2 text-sm text-gray-500 md:text-base">I make your dreams come true. Message me and realize your dream!</p>
+                        
+                        {/* Button links */}
+                        <div className="flex mt-6">
+                            <a class="block px-6 py-2 text-xs font-semibold text-white transition-colors duration-200 transform bg-red-600 rounded-md hover:bg-red-500">
+                                Resume
+                            </a>
+                            <NavLink to={"/projects"} class="block px-6 py-2 mx-4 text-xs font-semibold text-red-600 transition-colors duration-200 transform border border-red-600 rounded-md hover:bg-red-500">
+                                Projects
+                            </NavLink>
+                        </div>
+                    </div>
+                </div>
+                {/* right / bottom */}
+                <div className="relative w-full h-64 md:w-1/2 md:h-auto">
+                    <div className="absolute w-full h-full bg-black opacity-25"></div>
+                    <img className="w-full h-full bg-cover" src={backgroundImg} alt="beach"/>
+                </div>
             </section>
         </main>
     )
