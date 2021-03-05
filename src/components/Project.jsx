@@ -38,20 +38,21 @@ const Project = () => {
 function ProjectItem({ project }) {
     return (
         <article className="bg-white shadow-md rounded-md">
-            {/* card header */}
-            <div className="px-3 pt-2">
-                <h1 className="lg:text-center text-2xl font-bold sticks">{project.title}</h1>
-            </div>
+            
             <img className="w-full h-40 bg-red-500"  />
             {/* card body */}
             <div className="px-3 mt-2">
-                <div className="flex justify-between text-md text-gray-400">
+                <div className="flex justify-between text-sm text-gray-400">
                     <span>Date: </span>
                     <span className="">{new Date(project.date).toLocaleDateString()}</span>
                 </div>
-                <p className="text-lg text-gray-700 leading-relaxed">{project.description}</p>
+                {/* card header */}
+            <div className="pt-2">
+                <h1 className="lg:text-center text-2xl font-bold sticks">{project.title}</h1>
+            </div>
+                <p className="text-lg text-gray-700 leading-snug mt-2">{project.description}</p>
                 {/* links */}
-                <div className="flex my-4 text-center">
+                <div className="flex my-4 text-center ">
                     <a href="#" className="w-1/2 font-semibold text-green-500 border-green-500 border rounded-sm px-4 py-2 hover:bg-green-500 hover:text-white transition ease-in">
                         Github
                     </a>
@@ -62,8 +63,9 @@ function ProjectItem({ project }) {
             </div>
             {/* card footer */}
             <div className="border-t border-gray-200 px-3 py-1 mt-2">
-                <h4 className="mb-1  text-gray-400">Tags:</h4>
-                <div className="flex flex-wrap gap-x-4 gap-y-2 py-1">
+                <h4 className="mb-1 text-sm text-gray-400">Tags:</h4>
+                {/* TODO: make tags horizonally scrollable */}
+                <div className="flex flex-wrap w-full  gap-x-4 gap-y-2 py-1">
                     {project.tags.map(tag => (
                         <span className="text-sm bg-red-100 text-red-600 px-4 font-semibold rounded-lg">{tag}</span>
                     ))}
