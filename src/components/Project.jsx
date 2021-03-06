@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import sanityClient from '../client';
-
+import beachside from '../beachside.jpg'
 const Project = () => {
     const [projectsData, setProjectsData] = useState(null);
     useEffect(() => {
@@ -27,7 +27,8 @@ const Project = () => {
                     <h3 className="mt-4 text-gray-600">My latest works. Enjoy!</h3>
                 </div>
                 {/* Project Cards */}
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-y-4 gap-x-4 mt-4">
+                {/* TODO: center cards */}
+                <div className="grid md:grid-cols-2 lg:grid-cols-1 gap-y-4 gap-x-4 mt-4 lg:w-1/2 mx-auto">
                     {projectsData?.map((project, index) => <ProjectItem project={project} index={index} />)}
                 </div>
             </section>
@@ -35,18 +36,21 @@ const Project = () => {
     )
 }
 
-// TODO: add github links
 function ProjectItem({ project }) {
     return (
-        <article className="bg-white shadow-lg rounded-sm  overflow-hidden">
+        <article className="bg-white shadow-lg rounded-sm overflow-hidden  lg:rounded-md lg:flex">
             {/* Card img */}
-            <img className="w-full h-40 bg-red-500"  />
+            <div className="lg:w-1/2 h-50 lg:h-auto bg-gray-100">
+                <img className="w-full h-full object-cover" src={beachside} />
+            </div>
                     
-            {/* card body */}
-            <ProjectBody project={project} />
-            
-            {/* card footer */}
-            <ProjectFooter tags={project.tags} />
+            <div className="lg:w-1/2">
+                {/* card body */}
+                <ProjectBody project={project} />
+                
+                {/* card footer */}
+                <ProjectFooter tags={project.tags} />
+            </div>
         </article >
     )
 }
@@ -60,7 +64,7 @@ function ProjectBody({ project }) {
                 <span className="">{new Date(project.date).toLocaleDateString()}</span>
             </div>
             {/* card header */}
-            <h1 className="lg:text-center text-xl font-bold sticks mt-2">{project.title}</h1>
+            <h1 className="text-xl font-bold sticks mt-2 ">{project.title}</h1>
             
             <p className="text-sm text-gray-700 leading-snug ">{project.description}</p>
             {/* links */}
