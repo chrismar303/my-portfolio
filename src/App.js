@@ -7,7 +7,7 @@ import SinglePost from './components/SinglePost';
 import AppNavbar from './components/AppNavbar';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import './App.scss';
+import './App.css';
 
 
 function App() {
