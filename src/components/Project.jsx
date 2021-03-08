@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import sanityClient from '../client';
 import beachside from '../beachside.jpg'
+import Section from './Section';
+
 const Project = () => {
     const [projectsData, setProjectsData] = useState(null);
     useEffect(() => {
@@ -19,19 +21,17 @@ const Project = () => {
     }, [projectsData]);
    
     return (
-        <main className="bg-gray-100 min-h-screen px-2 md:px-4 py-12">
-            <section className="container mx-auto">
+        <main className="bg-gray-100  px-2 md:px-4">
+            <Section title="My Projects" subtitle="My latest works. Enjoy!">
                 {/* page title */}
                 <div className="text-center">
-                    <h1 className="text-5xl sticks">My Projects</h1>
-                    <h3 className="mt-4 text-gray-600">My latest works. Enjoy!</h3>
                 </div>
                 {/* Project Cards */}
                 {/* TODO: center cards */}
                 <div className="grid md:grid-cols-2 lg:grid-cols-1 gap-y-4 gap-x-4 mt-4 lg:w-1/2 mx-auto">
                     {projectsData?.map((project, index) => <ProjectItem project={project} index={index} />)}
                 </div>
-            </section>
+            </Section>
         </main>
     )
 }

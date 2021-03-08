@@ -3,6 +3,7 @@ import beachside from '../beachside.jpg';
 import imageUrlBuilder from '@sanity/image-url'
 import BlockContent from '@sanity/block-content-to-react'
 import sanityClient from '../client.js';
+import Section from './Section';
 
 // TODO: put into 1 place (about / singlepost)
 const builder = imageUrlBuilder(sanityClient);
@@ -25,8 +26,7 @@ const About = () => {
 
     return (
         <main>
-            <section className="container mx-auto min-h-screen  pt-12 lg:px-12">
-                <h2 className="text-lg font-semibold text-center">About me</h2>
+            <Section title="About me">
                 {/* hero */}
                 <div className="flex flex-col mt-4 lg:mt-8 lg:flex-row">
                     {/* img */}
@@ -54,7 +54,7 @@ const About = () => {
                         </div>
                     </div>
                 </div>
-            </section>
+            </Section>
         </main>
     )
     // return (

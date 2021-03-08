@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import sanityClient from '../client.js';
 import PostItem from './PostItem';
+import Section from './Section';
+
 const Post = () => {
     const [postData, setPostData] = useState(null);
 
@@ -25,10 +27,8 @@ const Post = () => {
     }, [postData]);
     
     return (
-        <main className="bg-gray-100 min-h-screen p-12">
-            <section className="container mx-auto mb-6">
-                <h1 className="text-5xl flex justify-center sticks mt-4">Blog Post</h1>
-                <h2 className="mt-4 text-lg text-gray-600 flex justify-center mb-8">Welcome to my page of blog post</h2>
+        <main className="bg-gray-100 min-h-screen px-2 md:px-4">
+            <Section title="Blog Post" subtitle="Welcome to my page of blog post">
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-20">
                     {postData && postData.map((post, index) => (
                         <article className="">
@@ -44,7 +44,7 @@ const Post = () => {
                         </article>
                     ))}
                 </div>
-            </section>
+            </Section>
         </main>
     )
 }

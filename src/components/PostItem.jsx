@@ -1,6 +1,6 @@
 const PostItem = ({ title, imgUrl, alt, published }) => {
     return (
-        <span className="relative block rounded leading-snug flex flex-col items-center justify-center max-w-md  mx-auto border border-red-400 rounded-lg">
+        <span className="relative block rounded leading-snug flex flex-col items-center justify-center max-w-md  mx-auto  rounded-lg">
             <img className="w-full h-64 bg-gray-300 bg-center bg-cover rounded-lg object-cover shadow-md" src={imgUrl} alt={alt} />
 
             <div className="absolute -bottom-10 w-56 overflow-hidden bg-white rounded-lg shadow-lg md:w-64 dark:bg-gray-800">

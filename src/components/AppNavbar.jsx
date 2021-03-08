@@ -6,7 +6,7 @@ const AppNavbar = () => {
     const [open, setOpen] = useState(false);
 
     return (
-        <header className="bg-white text-black w-full shadow-md">
+        <header className="bg-white text-black w-full shadow">
             <nav className="items-center lg:flex lg:items-center lg:justify-between lg:w-10/12 lg:mx-auto lg:py-3">
                 {/* logo */}
                 <div className="flex p-3 text-red-500 relative">
