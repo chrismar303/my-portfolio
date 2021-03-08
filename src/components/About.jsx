@@ -38,7 +38,7 @@ const About = () => {
                         {/* about */}
                         <div>
                             <h3 className="text-lg font-semibold text-red-500">Who I Am</h3>
-                            <p className="mt-2 ">
+                            <p className="mt-2 font-light">
                                 Hey it is your boy Chrismar. Welcome to my website. Please enjoy and hit me up :)
                                 UCI Graduate! ZOT ZOT ZOT!!! Forever An OG Computer Scientist with a specialization in Systems and Software
                             </p>
