@@ -43,52 +43,59 @@ const About = () => {
                                 UCI Graduate! ZOT ZOT ZOT!!! Forever An OG Computer Scientist with a specialization in Systems and Software
                             </p>
                         </div>
+                        {/* Education */}
+                        <div>
+                            <h3 className="mt-4 text-lg font-semibold text-red-500">Education</h3>
+                            <Education />
+                        </div>
                         {/* skills sections */}
                         <div>
                             <h3 className="mt-4 text-lg font-semibold text-red-500">Skills</h3>
-                            <ul className="p-2 text-sm flex gap-2">
+                            <ul className="p-2 text-sm flex flex-wrap gap-2">
                                 <Skill name="React" />
                                 <Skill name="Node" />
                                 <Skill name="Python" />
+                                <Skill name="HTML" />
+                                <Skill name="CSS" />
+                                <Skill name="Java" />
+                                <Skill name="C++" />
                             </ul>
                         </div>
+
                     </div>
                 </div>
             </Section>
         </main>
     )
-    // return (
-    //     <main className="relative">
-    //         <img src={beachside} alt="Beachside" className="absolute w-full" />
-    //         <div className="p-10 lg:pt-48 container mx-auto relative">
-    //             <section className="bg-green-800 rounded-lg shadow-2xl lg:flex p-20">
-    //                 <img 
-    //                     src={urlFor(author.authorImage).url()} 
-    //                     alt="author" 
-    //                     className="rounded w-32 h-32 lg:w-64 lg:h-64 mr-8" 
-    //                 />
-    //                 <div className="text-lg flex flex-col justify-center">
-    //                     <h1 className="sticks text-6xl text-green-300 mb-4">
-    //                         Hello Welcome to Chrismar Online. I'm{" "}
-    //                         <span className="text-green-100">{author.name}</span>
-    //                     </h1>
-    //                     <div className="prose lg:prose-xl text-white">
-    //                         <BlockContent 
-    //                             blocks={author.bio} 
-    //                             projectId="wdj97s84"
-    //                             dataset="production" />
-    //                     </div>
-    //                 </div>
-    //             </section>
-    //         </div>
-    //     </main>
-    // )
 }
 
 function Skill({ name }) {
     return (
-        <li className="px-2 py-1 text-red-500 border border-red-500">{name}</li>
+        <li className="px-2 py-1 text-red-500 shadow">{name}</li>
     )
 }
+
+function Education() {
+    return (
+        <ul>
+            <li><EducationItem title="University of California, Irvine" subtitle="B.S. Computer Science" type="Degree" /></li>
+            <li><EducationItem title="React Native Course" subtitle="Udemy" type="Certificate" /></li>
+            <li><EducationItem title="Web Developers Course" subtitle="Udemy" type="Certificate" /></li>
+        </ul>
+    )
+}
+
+function EducationItem({ title, subtitle, type }) {
+    return (
+        <div className="bg-gray-50 shadow p-4 mt-2">
+            <div className="flex justify-between items-center">
+                <h4 className="font-semibold">{title}</h4>
+                <span className="text-xs text-gray-500">{type}</span>
+            </div>
+            <h6 className="font-light">{subtitle}</h6>
+        </div>
+    )
+
+} 
 
 export default About;
