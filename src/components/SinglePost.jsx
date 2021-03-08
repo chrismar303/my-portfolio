@@ -13,24 +13,24 @@ const SinglePost = () => {
     const [singlePost, setSinglePost] = useState(null);
     const { slug } = useParams();
 
-    useEffect(() => {
-        sanityClient.fetch(`*[slug.current == "${slug}"]{
-            title,
-            _id,
-            slug,
-            mainImage{
-                asset->{
-                    _id,
-                    url
-                }
-            },
-            body,
-            "name": author->name,
-            "authorImage": author->image
-        }`)
-        .then(data => setSinglePost(data[0]))
-        .catch(console.error);
-    }, [slug]);
+    // useEffect(() => {
+    //     sanityClient.fetch(`*[slug.current == "${slug}"]{
+    //         title,
+    //         _id,
+    //         slug,
+    //         mainImage{
+    //             asset->{
+    //                 _id,
+    //                 url
+    //             }
+    //         },
+    //         body,
+    //         "name": author->name,
+    //         "authorImage": author->image
+    //     }`)
+    //     .then(data => setSinglePost(data[0]))
+    //     .catch(console.error);
+    // }, [slug]);
     if(!singlePost) return <div>Loading...</div>
     return (
         <main className="bg-gray-200 min-h-screen p-12">

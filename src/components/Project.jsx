@@ -5,29 +5,26 @@ import Section from './Section';
 
 const Project = () => {
     const [projectsData, setProjectsData] = useState(null);
-    useEffect(() => {
-        sanityClient.fetch(`*[_type == "project"]{
-            title,
-            date,
-            place,
-            description,
-            projectType,
-            link,
-            github,
-            tags
-        }`)
-        .then(data => setProjectsData(data))
-        .catch(console.error);
-    }, [projectsData]);
+    // useEffect(() => {
+    //     sanityClient.fetch(`*[_type == "project"]{
+    //         title,
+    //         date,
+    //         place,
+    //         description,
+    //         projectType,
+    //         link,
+    //         github,
+    //         tags
+    //     }`)
+    //     .then(data => setProjectsData(data))
+    //     .catch(console.error);
+    // }, [projectsData]);
    
     return (
         <main className="bg-gray-50  px-2 md:px-4">
             <Section title="My Projects" subtitle="My latest works. Enjoy!">
                 {/* page title */}
-                <div className="text-center">
-                </div>
                 {/* Project Cards */}
-                {/* TODO: center cards */}
                 <div className="grid md:grid-cols-2 lg:grid-cols-1 gap-y-4 gap-x-4 mt-4 lg:w-1/2 mx-auto">
                     {projectsData?.map((project, index) => <ProjectItem project={project} index={index} />)}
                 </div>

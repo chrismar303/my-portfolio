@@ -8,29 +8,29 @@ const Post = () => {
     const [postData, setPostData] = useState(null);
 
     // TODO: do this with axios
-    useEffect(() => {
-        sanityClient
-            .fetch(`*[_type == "post"]{
-                title,
-                slug,
-                publishedAt,
-                mainImage{
-                    asset->{
-                        _id,
-                        url
-                    },
-                    alt
-                }
-            }`)
-            .then(data => setPostData(data))
-            .catch(console.error);
-    }, [postData]);
+    // useEffect(() => {
+    //     sanityClient
+    //         .fetch(`*[_type == "post"]{
+    //             title,
+    //             slug,
+    //             publishedAt,
+    //             mainImage{
+    //                 asset->{
+    //                     _id,
+    //                     url
+    //                 },
+    //                 alt
+    //             }
+    //         }`)
+    //         .then(data => setPostData(data))
+    //         .catch(console.error);
+    // }, [postData]);
     
     return (
         <main className="bg-gray-50 min-h-screen px-2 md:px-4">
             <Section title="Blog Post" subtitle="Welcome to my page of blog post">
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-20">
-                    {postData && postData.map((post, index) => (
+                    {postData?.map((post, index) => (
                         <article className="">
                             <Link to={`/post/${post.slug.current}`} key={post.slug.current} exact>
                                 <PostItem 
