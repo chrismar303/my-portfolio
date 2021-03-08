@@ -21,7 +21,7 @@ const Project = () => {
     }, [projectsData]);
    
     return (
-        <main className="bg-gray-100  px-2 md:px-4">
+        <main className="bg-gray-50  px-2 md:px-4">
             <Section title="My Projects" subtitle="My latest works. Enjoy!">
                 {/* page title */}
                 <div className="text-center">
@@ -38,7 +38,7 @@ const Project = () => {
 
 function ProjectItem({ project }) {
     return (
-        <article className="bg-white shadow-lg rounded-sm overflow-hidden  lg:rounded-md lg:flex">
+        <article className="bg-white shadow rounded-sm overflow-hidden  lg:rounded-md lg:flex">
             {/* Card img */}
             <div className="lg:w-1/2 h-50 lg:h-auto bg-gray-100">
                 <img className="w-full h-full object-cover" src={beachside} />

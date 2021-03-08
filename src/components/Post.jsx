@@ -27,7 +27,7 @@ const Post = () => {
     }, [postData]);
     
     return (
-        <main className="bg-gray-100 min-h-screen px-2 md:px-4">
+        <main className="bg-gray-50 min-h-screen px-2 md:px-4">
             <Section title="Blog Post" subtitle="Welcome to my page of blog post">
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-20">
                     {postData && postData.map((post, index) => (
