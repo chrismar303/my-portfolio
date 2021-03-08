@@ -1,34 +1,41 @@
+import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 // import { SocialIcon } from 'react-social-icons';
 
 const AppNavbar = () => {
+    const [open, setOpen] = useState(false);
+
     return (
-        <header className="text-red-600 body-font ">
-            <nav className="border-b  container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center justify-between">
-                <NavLink to="/" exact className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className="w-10 h-10 text-white p-2 bg-red-500 rounded-full" viewBox="0 0 24 24">
-                    </svg>
-                    <span className="ml-3 text-xl">CM</span>
-                </NavLink>
-                <div className="font-medium text-lg flex flex-wrap items-center text-base justify-center">
-                    <Link text="Home" href="/" exact />
-                    <Link text="About" href="/about" />
-                    <Link text="Projects" href="/projects" />
-                    <Link text="Post" href="/post" />
-                    <NavLink to="/contact" className="text-red-600">
-                        <button className="font-medium inline-flex items-center bg-red-100 border-0 py-2 px-4 focus:outline-none hover:text-red-900 hover:bg-red-200 rounded text-base mt-4 md:mt-0">
-                                Contact me
-                        </button>
-                    </NavLink>
+        <header className="bg-white text-black w-full shadow-md">
+            <nav className="items-center lg:flex lg:items-center lg:justify-between lg:w-10/12 lg:mx-auto lg:py-3">
+                {/* logo */}
+                <div className="flex p-3 text-red-500 relative">
+                    <h2 className="mx-auto text-xl font-bold">CTech</h2>
+                    <span
+                        onClick={() => setOpen(!open)}
+                        className="absolute right-3 border-2 border-red-500 p-1 cursor-pointer lg:hidden"
+                    >
+                            CM
+                    </span>
                 </div>
+                {/* main */}
+                <div className={`${open ? '' : 'hidden'} flex flex-col font-light justify-center items-center lg:block`}>
+                    <Link text="Home" href="/" exact />
+                    <Link text="About" href="/about"  />
+                    <Link text="Projects" href="/projects"  />
+                    <Link text="Post" href="/post"  /> 
+                    <Link text="Contact" href="/contact" /> 
+                </div>
+
             </nav>
         </header>
     )
+   
 }
 
 function Link({ text, href, exact }) {
     return (
-        <NavLink to={href} exact={exact || false} className="mr-10 px-2 py-2 text-red-500 hover:text-red-800 hover:bg-red-300 transition ease-in rounded-md">
+         <NavLink to={href} exact={exact || false} className="w-full py-2 px-6 text-lg text-center text-red-500  hover:text-white hover:bg-red-600 rounded-sm transition ease-in">
             {text}
         </NavLink>
     )
