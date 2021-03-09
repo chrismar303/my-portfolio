@@ -1,5 +1,5 @@
 import Section from './Section';
-import { AboutData}  from '../data';
+import { aboutData}  from '../data';
 
 const About = () => {    
     return (
@@ -9,7 +9,7 @@ const About = () => {
                 <div className="flex flex-col mt-4 lg:mt-8 lg:flex-row">
                     {/* img */}
                     <div className="flex-1 flex justify-center p-2 overflow-hidden lg:rounded-sm">
-                        <img className="max-h-96" src={AboutData.image} alt={AboutData.imageAlt} />
+                        <img className="max-h-96" src={aboutData.image} alt={aboutData.imageAlt} />
                     </div>
                     {/* content */}
                     <Content />
@@ -26,7 +26,7 @@ function Content() {
             {/* about */}
             <div>
                 <h3 className="text-lg font-semibold text-red-500">Who I Am</h3>
-                <p className="mt-2 font-light">{AboutData.body}</p>
+                <p className="mt-2 font-light">{aboutData.body}</p>
             </div>
             {/* Education */}
             <div>
@@ -45,7 +45,7 @@ function Content() {
 function Skills() {
     return (
         <ul className="p-2 text-sm flex flex-wrap gap-2">
-            {AboutData.skills?.map((skill, index) => (
+            {aboutData.skills?.map((skill, index) => (
                 <li key={index} className="px-2 py-1 text-red-500 shadow"><Skill name={skill} /></li>
             ))}
         </ul>
@@ -61,7 +61,7 @@ function Skill({ name }) {
 function Education() {
     return (
         <ul>
-            {AboutData.education?.map((item, index) => (
+            {aboutData.education?.map((item, index) => (
                 <li key={index}><EducationItem title={item.title} subtitle={item.subtitle} type={item.type} /></li>
             ))}
         </ul>
