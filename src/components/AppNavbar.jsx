@@ -19,11 +19,11 @@ const AppNavbar = () => {
                     </span>
                 </div>
                 {/* main */}
-                <div className={`${open ? 'left-0' : '-left-full'} duration-300 fixed bg-gray-50 top-0 w-full h-full z-50 flex flex-col text-3xl  justify-center items-center lg:block`}>
+                <div className={`${open ? 'left-0' : '-left-full'} duration-500 ease-in-out fixed bg-white  top-0 w-full h-full z-50 flex flex-col text-3xl  justify-center items-center lg:relative lg:block lg:left-0 lg:text-sm lg:w-max `}>
                     {/* close menu */}
                     <div 
                         onClick={_ => setOpen(false)}
-                        className="absolute top-3 right-2 bg-red-500 text-white text-base rounded-full px-4 py-2"
+                        className="absolute top-3 right-2 bg-red-500 text-white text-base rounded-full px-4 py-2 lg:hidden"
                     >
                         <span>X</span>
                     </div>
@@ -42,7 +42,7 @@ const AppNavbar = () => {
 
 function Link({ text, href, exact }) {
     return (
-         <NavLink to={href} exact={exact || false} className="w-full py-8 px-6  text-center text-red-500  hover:text-white hover:bg-red-600 rounded-sm transition ease-in">
+         <NavLink to={href} exact={exact || false} className="w-full py-8 px-6  text-center text-red-500  hover:text-white hover:bg-red-600 rounded-sm transition ease-in lg:px-4 lg:py-3">
             {text}
         </NavLink>
     )
