@@ -12,17 +12,24 @@ const AppNavbar = () => {
                 <div className="flex p-3 text-red-500 relative">
                     <h2 className="mx-auto text-xl font-bold">CTech</h2>
                     <span
-                        onClick={() => setOpen(!open)}
+                        onClick={() => setOpen(true)}
                         className="absolute right-3 border-2 border-red-500 p-1 cursor-pointer lg:hidden"
                     >
                             CM
                     </span>
                 </div>
                 {/* main */}
-                <div className={`${open ? '' : 'hidden'} flex flex-col font-light justify-center items-center lg:block`}>
+                <div className={`${open ? 'left-0' : '-left-96'} duration-300 fixed bg-gray-50 top-0 w-full h-full z-50 flex flex-col text-3xl  justify-center items-center lg:block`}>
+                    {/* close menu */}
+                    <div 
+                        onClick={_ => setOpen(false)}
+                        className="absolute top-3 right-2 bg-red-500 text-white text-base rounded-full px-4 py-2"
+                    >
+                        <span>X</span>
+                    </div>
                     <Link text="Home" href="/" exact />
                     <Link text="About" href="/about"  />
-                    <Link text="Projects" href="/projects"  />
+                    <Link text="Projects" href="/projects" />
                     <Link text="Post" href="/post"  /> 
                     <Link text="Contact" href="/contact" /> 
                 </div>
@@ -35,7 +42,7 @@ const AppNavbar = () => {
 
 function Link({ text, href, exact }) {
     return (
-         <NavLink to={href} exact={exact || false} className="w-full py-2 px-6 text-lg text-center text-red-500  hover:text-white hover:bg-red-600 rounded-sm transition ease-in">
+         <NavLink to={href} exact={exact || false} className="w-full py-8 px-6  text-center text-red-500  hover:text-white hover:bg-red-600 rounded-sm transition ease-in">
             {text}
         </NavLink>
     )
