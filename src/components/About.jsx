@@ -22,7 +22,7 @@ const About = () => {
     //     .then(data => setAuthor(data[0]))
     //     .catch(console.error);
     // }, []);
-    if(!author) return <div>Loading...</div>
+    // if(!author) return <div>Loading...</div>
 
     return (
         <main>
@@ -30,8 +30,9 @@ const About = () => {
                 {/* hero */}
                 <div className="flex flex-col mt-4 lg:mt-8 lg:flex-row">
                     {/* img */}
-                    <div className="flex-1 overflow-hidden lg:rounded-sm">
-                        <img className="" src={author.authorImage} alt="author"/>
+                    <div className="flex-1 flex justify-center p-2 overflow-hidden lg:rounded-sm">
+                        {/* <img className="" src={author.authorImage} alt="author"/> */}
+                        <img className="max-h-96" src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fimages.wikia.com%2Fpathinfo%2Fimages%2F3%2F3a%2FIrvine_logo.gif&f=1&nofb=1" alt="me"/>
                     </div>
                     {/* content */}
                     <div className="flex-1 p-2 lg:h-1/2 lg:m-auto lg:pl-8 ">
