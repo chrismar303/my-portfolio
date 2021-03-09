@@ -19,7 +19,7 @@ const AppNavbar = () => {
                     </span>
                 </div>
                 {/* main */}
-                <div className={`${open ? 'left-0' : '-left-96'} duration-300 fixed bg-gray-50 top-0 w-full h-full z-50 flex flex-col text-3xl  justify-center items-center lg:block`}>
+                <div className={`${open ? 'left-0' : '-left-full'} duration-300 fixed bg-gray-50 top-0 w-full h-full z-50 flex flex-col text-3xl  justify-center items-center lg:block`}>
                     {/* close menu */}
                     <div 
                         onClick={_ => setOpen(false)}
