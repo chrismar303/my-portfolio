@@ -8,8 +8,8 @@ const About = () => {
                 {/* hero */}
                 <div className="flex flex-col mt-4 lg:mt-8 lg:flex-row">
                     {/* img */}
-                    <div className="flex-1 flex justify-center p-2 overflow-hidden lg:rounded-sm">
-                        <img className="max-h-96" src={aboutData.image} alt={aboutData.imageAlt} />
+                    <div className="flex-1 flex justify-center overflow-hidden lg:rounded-sm">
+                        <img className="max-h-96 object-cover" src={aboutData.image} alt={aboutData.imageAlt} />
                     </div>
                     {/* content */}
                     <Content />
