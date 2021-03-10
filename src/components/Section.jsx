@@ -10,9 +10,9 @@ const Section = ({ title, subtitle, children }) => {
 
 function Header({ title, subtitle }) {
     return (
-        <div className="text-center mb-4">
+        <div className="text-center mb-4 px-4">
             <h2 className="text-lg font-semibold">{title}</h2>
-            <h3 className="mt-1 text-xs text-gray-600">{subtitle}</h3>
+            <h3 className="mt-1 text-xs text-gray-600 mx-auto leading-relaxed lg:w-2/3">{subtitle}</h3>
         </div>
     )
 } 
