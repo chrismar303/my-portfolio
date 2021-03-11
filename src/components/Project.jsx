@@ -41,10 +41,10 @@ function ProjectBody({ project }) {
             {/* metadata */}
             <div className="flex justify-between text-xs uppercase text-gray-400">
                 <span>Date: </span>
-                <span className="">{new Date(project.date).toLocaleDateString()}</span>
+                <span>{new Date(project.date).toLocaleDateString()}</span>
             </div>
             {/* card header */}
-            <h1 className="text-xl font-bold sticks mt-2 ">{project.title}</h1>
+            <h1 className="text-xl font-bold mt-2 ">{project.title}</h1>
             
             <p className="text-sm text-gray-700 leading-snug ">{project.description}</p>
             {/* links */}
