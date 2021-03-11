@@ -4,7 +4,7 @@ import backgroundImg from '../landing.jpg';
 const Home = () => {
     return (
         <main className="px-6 lg:p-0">
-            <section className="md:flex">
+            <section className="py-12 md:flex">
                 {/* left / top */}
                 <div className="flex items-center justify-center w-full py-8 md:h-128 md:w-1/2">
                     <div className="max-w-xl">

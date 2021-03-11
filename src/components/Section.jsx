@@ -1,6 +1,6 @@
 const Section = ({ title, subtitle, children }) => {
     return (
-        <section className="container mx-auto min-h-screen pt-12 pb-24 lg:px-12">
+        <section className="container mx-auto min-h-screen py-24 lg:py-32 lg:px-12">
             {/* header */}
             <Header title={title} subtitle={subtitle} />
             {children}
