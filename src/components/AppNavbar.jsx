@@ -25,7 +25,7 @@ const AppNavbar = () => {
                     {/* close menu */}
                     <div 
                         onClick={_ => setOpen(false)}
-                        className="absolute top-3 right-3 text-4xl text-red-700 lg:hidden"
+                        className="absolute top-3 right-3 text-4xl text-red-700 cursor-pointer lg:hidden"
                     >
                         <MdClose />
                     </div>
