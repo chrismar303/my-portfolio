@@ -1,7 +1,7 @@
-import beachside from './beachside.jpg'
-// import aboutImage from './about2.jpg';
-// import aboutImage from './about.JPG';
-import aboutImage from './about3.JPG';
+import beachside from './assets/images/beachside.jpg';
+// import aboutImage from './assets/images/about2.jpg';
+// import aboutImage from './assets/images/about.JPG';
+import aboutImage from './assets/images/about3.JPG';
 
 export const aboutData = {
     image: aboutImage,

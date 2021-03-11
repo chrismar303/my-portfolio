@@ -1,4 +1,3 @@
-import beachside from '../beachside.jpg'
 import Section from './Section';
 import { projectsData } from '../data.js'
 
