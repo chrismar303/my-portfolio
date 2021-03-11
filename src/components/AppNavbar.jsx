@@ -3,10 +3,12 @@ import { NavLink } from 'react-router-dom';
 import { SocialIcon } from 'react-social-icons';
 import { BiMenu } from 'react-icons/bi';
 import { MdClose } from 'react-icons/md'
-// BiMenu
 
 const AppNavbar = () => {
+    // only applies to mobile
     const [open, setOpen] = useState(false);
+    const openMenu = _ => setOpen(true);
+    const closeMenu = _ => setOpen(false);
 
     return (
         <header className="bg-white text-black w-full shadow">
@@ -17,14 +19,14 @@ const AppNavbar = () => {
                     <span
                         className="absolute top-0 left-0 h-full w-full text-xl flex justify-end pr-3 items-center text-gray-500 lg:hidden"
                     >
-                        <BiMenu className="cursor-pointer" onClick={() => setOpen(true)} />
+                        <BiMenu className="cursor-pointer" onClick={openMenu} />
                     </span>
                 </div>
                 {/* main */}
                 <div className={`${open ? 'left-0' : '-left-full'} duration-500 ease-in-out fixed bg-white  top-0 w-full h-full z-50 flex flex-col text-4xl  justify-around items-center lg:relative lg:block lg:left-0 lg:text-sm lg:w-max `}>
                     {/* close menu */}
                     <div 
-                        onClick={_ => setOpen(false)}
+                        onClick={closeMenu}
                         className="absolute top-3 right-3 text-4xl text-red-700 cursor-pointer lg:hidden"
                     >
                         <MdClose />
@@ -32,10 +34,10 @@ const AppNavbar = () => {
                     {/* menu content */}
                     <h5 className="text-lg font-bold text-red-900 lg:hidden">Chrismar</h5>
                     <div className="flex flex-col w-full lg:flex-row lg:gap-8">
-                        <Link text="Home" href="/" exact />
-                        <Link text="About" href="/about"  />
-                        <Link text="Projects" href="/projects" />
-                        <Link text="Contact" href="/contact" /> 
+                        <Link text="Home" href="/" exact  onClick={closeMenu}/>
+                        <Link text="About" href="/about"  onClick={closeMenu} />
+                        <Link text="Projects" href="/projects" onClick={closeMenu} />
+                        <Link text="Contact" href="/contact" onClick={closeMenu} /> 
                     </div>
                     <SocialLinks />
                     
@@ -46,9 +48,9 @@ const AppNavbar = () => {
    
 }
 
-function Link({ text, href, exact }) {
+function Link({ text, href, exact, onClick }) {
     return (
-         <NavLink to={href} exact={exact || false} className="w-full py-6 px-6  text-center text-red-500  hover:text-white hover:bg-red-600 rounded-sm transition ease-in lg:px-4 lg:py-3">
+         <NavLink to={href} exact={exact || false} onClick={onClick} className="w-full py-6 px-6  text-center text-red-500  hover:text-white hover:bg-red-600 rounded-sm transition ease-in lg:px-4 lg:py-3">
             {text}
         </NavLink>
     )
