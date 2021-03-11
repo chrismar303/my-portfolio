@@ -24,20 +24,27 @@ function Content() {
     return (
         <div className="flex-1 p-2 lg:h-1/2 lg:m-auto lg:pl-8 ">
             {/* about */}
-            <div>
-                <h3 className="text-lg font-semibold text-red-500">Who I Am</h3>
+            <ContentSection title="Who I Am">
                 <p className="mt-2 font-light">{aboutData.body}</p>
-            </div>
+            </ContentSection>
             {/* Education */}
-            <div>
-                <h3 className="mt-4 text-lg font-semibold text-red-500">Education</h3>
+            <ContentSection title="Education">
                 <Education />
-            </div>
+            </ContentSection>
             {/* skills sections */}
-            <div>
-                <h3 className="mt-4 text-lg font-semibold text-red-500">Skills</h3>
+            <ContentSection title="Skills">
                 <Skills />
-            </div>
+            </ContentSection>
+        </div>
+    )
+}
+
+
+function ContentSection({ title, children }) {
+    return (
+        <div>
+            <h3 className="mt-4 text-lg font-semibold text-red-500 lg:mt-2">{title}</h3>
+            {children}
         </div>
     )
 }
