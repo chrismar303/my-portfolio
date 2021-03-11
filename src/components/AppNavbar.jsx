@@ -32,7 +32,6 @@ const AppNavbar = () => {
                     <Link text="Home" href="/" exact />
                     <Link text="About" href="/about"  />
                     <Link text="Projects" href="/projects" />
-                    <Link text="Post" href="/post"  /> 
                     <Link text="Contact" href="/contact" /> 
                     <SocialLinks />
                 </div>
