@@ -33,7 +33,7 @@ const AppNavbar = () => {
                     </div>
                     {/* menu content */}
                     <h5 className="text-lg font-bold text-red-900 lg:hidden">Chrismar</h5>
-                    <div className="flex flex-col w-full lg:flex-row lg:gap-8">
+                    <div className="flex flex-col  gap-12  lg:flex-row lg:gap-8 text-red-500">
                         <Link text="Home" href="/" exact  onClick={closeMenu}/>
                         <Link text="About" href="/about"  onClick={closeMenu} />
                         <Link text="Projects" href="/projects" onClick={closeMenu} />
@@ -50,7 +50,7 @@ const AppNavbar = () => {
 
 function Link({ text, href, exact, onClick }) {
     return (
-         <NavLink to={href} exact={exact || false} onClick={onClick} className="w-full py-6 px-6  text-center text-red-500  hover:text-white hover:bg-red-600 rounded-sm transition ease-in lg:px-4 lg:py-3">
+         <NavLink to={href} exact={exact || false} activeClassName="border-b-2 border-red-500 lg:bg-red-500 lg:text-white" onClick={onClick} className="w-full pb-4 px-3  text-center hover:text-white hover:bg-red-600 rounded-sm transition ease-in lg:px-4 lg:py-3">
             {text}
         </NavLink>
     )
