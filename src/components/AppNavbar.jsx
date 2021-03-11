@@ -21,7 +21,7 @@ const AppNavbar = () => {
                     </span>
                 </div>
                 {/* main */}
-                <div className={`${open ? 'left-0' : '-left-full'} duration-500 ease-in-out fixed bg-white  top-0 w-full h-full z-50 flex flex-col text-4xl  justify-center items-center lg:relative lg:block lg:left-0 lg:text-sm lg:w-max `}>
+                <div className={`${open ? 'left-0' : '-left-full'} duration-500 ease-in-out fixed bg-white  top-0 w-full h-full z-50 flex flex-col text-4xl  justify-around items-center lg:relative lg:block lg:left-0 lg:text-sm lg:w-max `}>
                     {/* close menu */}
                     <div 
                         onClick={_ => setOpen(false)}
@@ -29,11 +29,16 @@ const AppNavbar = () => {
                     >
                         <MdClose />
                     </div>
-                    <Link text="Home" href="/" exact />
-                    <Link text="About" href="/about"  />
-                    <Link text="Projects" href="/projects" />
-                    <Link text="Contact" href="/contact" /> 
+                    {/* menu content */}
+                    <h5 className="text-lg font-bold text-red-900 lg:hidden">Chrismar</h5>
+                    <div className="flex flex-col w-full lg:flex-row lg:gap-8">
+                        <Link text="Home" href="/" exact />
+                        <Link text="About" href="/about"  />
+                        <Link text="Projects" href="/projects" />
+                        <Link text="Contact" href="/contact" /> 
+                    </div>
                     <SocialLinks />
+                    
                 </div>
             </nav>
         </header>
@@ -51,7 +56,7 @@ function Link({ text, href, exact }) {
 
 function SocialLinks() {
     return (
-        <div className="absolute flex w-full bottom-10 justify-center gap-2 lg:hidden">
+        <div className="flex w-full justify-center gap-2 lg:hidden">
             <SocialIcon fgColor="#fff" url="https://www.linkedin.com/in/christian-martinez-b37868bb/" target="_blank" />
             <SocialIcon fgColor="#fff" url="https://github.com/chrismar303" target="_blank" />
             <SocialIcon fgColor="#fff" url="https://www.youtube.com/" target="_blank" />
