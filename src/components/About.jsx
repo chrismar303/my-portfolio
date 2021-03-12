@@ -1,7 +1,8 @@
 import Section from './Section';
-import { aboutData}  from '../data';
+import { aboutData }  from '../data';
 
-const About = () => {    
+const About = () => { 
+    console.log(aboutData.skills['React'])   ;
     return (
         <main>
             <Section title="About me">
@@ -51,17 +52,25 @@ function ContentSection({ title, children }) {
 
 function Skills() {
     return (
-        <ul className="p-2 text-sm flex flex-wrap gap-2">
-            {aboutData.skills?.map((skill, index) => (
-                <li key={index} className="px-2 py-1 text-red-500 shadow"><Skill name={skill} /></li>
+        <ul className="w-full p-2 text-sm flex flex-wrap justify-center md:gap-x-3 gap-y-4  ">
+            {Object.keys(aboutData.skills).map((skill, index) => (
+                <li key={index} className="px-2 py-1 text-gray-800 ">
+                    <Skill name={skill} />
+                </li>
             ))}
         </ul>
     )
 }
 
 function Skill({ name }) {
+    const { icon, color } = aboutData.skills[name]
     return (
-        <div>{name}</div>
+        <div className="flex flex-col justify-center items-center gap-1 w-16">
+            <span className={`text-5xl ${color}`}>{icon}</span>
+            <span className="font-medium text-black">
+                {name}
+            </span>
+        </div>
     )
 }
 
