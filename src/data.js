@@ -2,7 +2,8 @@ import beachside from './assets/images/beachside.jpg';
 // import aboutImage from './assets/images/about2.jpg';
 // import aboutImage from './assets/images/about.JPG';
 import aboutImage from './assets/images/about3.JPG';
-import { FaReact, FaPython, FaJsSquare, FaJs, FaNodeJs, FaJava, FaHtml5, FaCss3Alt } from "react-icons/fa";
+import { FaReact, FaPython, FaJsSquare, FaJs, FaNodeJs, FaJava, FaHtml5, FaCss3Alt, FaGraduationCap } from "react-icons/fa";
+import { RiFilePaper2Line } from "react-icons/ri";
 
 
 export const aboutData = {
@@ -10,9 +11,9 @@ export const aboutData = {
     imageAlt: 'me',
     body: 'My name is Christian Martinez. I graduated from the University of California, Irvine with a Bachelor of Science in Computer Science. I specialized in System and Software',
     education: [ 
-        { title: 'University of California, Irvine', subtitle: 'B.S. Computer Science', type: 'Degree' },
-        { title: 'React Native Course', subtitle: 'Udemy', type: 'Certificate' },
-        { title: 'Web Developers Course', subtitle: 'Udemy', type: 'Certificate' }
+        { title: 'University of California, Irvine', subtitle: 'B.S. Computer Science', type: 'Degree', icon: < FaGraduationCap /> },
+        { title: 'React Native Course', subtitle: 'Udemy', type: 'Certificate', icon: <RiFilePaper2Line /> },
+        { title: 'Web Developers Course', subtitle: 'Udemy', type: 'Certificate', icon: <RiFilePaper2Line /> }
     ],
     skills: { 
         'React': { icon: <FaReact />, color: 'text-blue-500' },
