@@ -40,7 +40,7 @@ const AppNavbar = () => {
                         <Link text="Contact" href="/contact" onClick={closeMenu} /> 
                     </div>
                     {/* menu social media links */}
-                    <div className="lg:hidden"><SocialLinks spacing={2} /></div>
+                    <div className="text-lg lg:hidden"><SocialLinks spacing={2} /></div>
                     
                 </div>
             </nav>

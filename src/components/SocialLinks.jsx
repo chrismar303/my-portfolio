@@ -13,7 +13,7 @@ const SocialLinks = ({ spacing }) => {
 function Social({ icon, color, inverted, href }) {
     const style = inverted ? `text-white bg-${color}-500` : `text-${color}-500 bg-gray-50`;
     return (
-        <a href={href} class={`${style} p-3 rounded-lg shadow flex items-center text-lg`} target="_blank" rel="noopener noreferrer">
+        <a href={href} class={`${style} p-3 rounded-lg shadow flex items-center`} target="_blank" rel="noopener noreferrer">
             {icon}
         </a>
     )

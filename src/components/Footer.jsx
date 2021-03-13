@@ -16,7 +16,7 @@ const Footer = () => {
                         © 2021 Chrismar
                     </a>
                 </p>
-                <div className="mt-5 lg:mt-0 lg:ml-auto">
+                <div className="mt-5 text-lg lg:mt-0 lg:ml-auto">
                     <SocialLinks spacing={2} />
                 </div>
             </div>

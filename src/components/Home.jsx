@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import backgroundImg from '../assets/images/landing.jpg';
+import SocialLinks from './SocialLinks';
 
 const Home = () => {
     return (
@@ -12,6 +13,11 @@ const Home = () => {
                         <h1 className="text-2xl font-semibold text-gray-800 mt-4 md:text-3xl lg:text-4xl">Chrismar</h1>
                         <h4 className="text-gray-400"><em>Developer and <span className="text-red-600">Dream-builder</span></em></h4>
                         <p className="mt-2 text-sm text-gray-500 md:text-base">I make your dreams come true. Message me and realize your dream!</p>
+                        
+                        {/* Socials */}
+                        <div className="text-xs mt-4" >
+                            <SocialLinks spacing={3} />
+                        </div>
                         
                         {/* Button links */}
                         <div className="flex mt-6">
