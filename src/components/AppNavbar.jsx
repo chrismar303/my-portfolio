@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import { SocialIcon } from 'react-social-icons';
+import SocialLinks from './SocialLinks';
 import { BiMenu } from 'react-icons/bi';
 import { MdClose } from 'react-icons/md'
 
@@ -39,7 +39,8 @@ const AppNavbar = () => {
                         <Link text="Projects" href="/projects" onClick={closeMenu} />
                         <Link text="Contact" href="/contact" onClick={closeMenu} /> 
                     </div>
-                    <SocialLinks />
+                    {/* menu social media links */}
+                    <div className="lg:hidden"><SocialLinks spacing={2} /></div>
                     
                 </div>
             </nav>
@@ -53,16 +54,6 @@ function Link({ text, href, exact, onClick }) {
          <NavLink to={href} exact={exact || false} activeClassName="border-b-2 border-red-500 lg:bg-red-500 lg:text-white" onClick={onClick} className="w-full pb-4 px-3  text-center hover:text-white hover:bg-red-600 rounded-sm transition ease-in lg:px-4 lg:py-3">
             {text}
         </NavLink>
-    )
-}
-
-function SocialLinks() {
-    return (
-        <div className="flex w-full justify-center gap-2 lg:hidden">
-            <SocialIcon fgColor="#fff" url="https://www.linkedin.com/in/christian-martinez-b37868bb/" target="_blank" />
-            <SocialIcon fgColor="#fff" url="https://github.com/chrismar303" target="_blank" />
-            <SocialIcon fgColor="#fff" url="https://www.youtube.com/" target="_blank" />
-        </div>
     )
 }
 
