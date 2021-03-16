@@ -39,7 +39,7 @@ function ProjectItem({ project, reverse }) {
 
 function ProjectBody({ project }) {
     return (
-        <div className="px-3 mt-2">
+        <div className="px-3 mt-2 h-full xl:flex xl:flex-col xl:gap-4">
             {/* metadata */}
             <div className="flex justify-between text-xs uppercase text-gray-400">
                 <span>Date: </span>

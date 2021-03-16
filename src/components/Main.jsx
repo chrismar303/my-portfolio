@@ -5,12 +5,12 @@ import Contact from './Contact';
 
 const Main = () => {
     return (
-        <>
+        <div>
             <Home />
             <About />
             <Project />
             <Contact />
-        </>
+        </div>
     )
 }
 
