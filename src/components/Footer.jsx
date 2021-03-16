@@ -16,6 +16,7 @@ const Footer = () => {
                         © 2021 Chrismar
                     </a>
                 </p>
+                {/* TODO: Fix alignment on mediun */}
                 <div className="mt-5 text-lg lg:mt-0 lg:ml-auto">
                     <SocialLinks spacing={2} />
                 </div>
