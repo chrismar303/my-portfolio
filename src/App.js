@@ -5,13 +5,14 @@ import Project from './components/Project';
 import AppNavbar from './components/AppNavbar';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import Main from 'components/Main';
 
 function App() {
   return (
     <Router>
       <AppNavbar></AppNavbar>
       <Switch>
-        <Route component={Home} path='/' exact />
+        <Route component={Main} path='/' exact />
         <Route component={About} path='/about' />
         <Route component={Project} path='/projects' />
         <Route component={Contact} path='/contact' />

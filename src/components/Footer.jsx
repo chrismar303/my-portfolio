@@ -3,7 +3,7 @@ import SocialLinks from './SocialLinks';
 
 const Footer = () => {
     return (
-        <footer className="text-gray-600 body-font border-t border-gray">
+        <footer className="text-gray-600 body-font border-t border-gray bg-gray-50">
             <div class="container px-5 py-8 mx-auto flex gap-6 items-center sm:flex-row flex-col lg:w-10/12 ">
                 <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
                     <span className="p-3  text-white rounded-full shadow bg-red-500">

@@ -2,7 +2,6 @@ import Section from './Section';
 import { aboutData }  from '../data';
 
 const About = () => { 
-    console.log(aboutData.skills['React'])   ;
     return (
         <main>
             <Section title="About me">

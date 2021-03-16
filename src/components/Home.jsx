@@ -5,8 +5,8 @@ import { FaMapMarkerAlt, FaEnvelope, FaPhoneAlt } from 'react-icons/fa';
 
 const Home = () => {
     return (
-        <main className="px-6 lg:p-0">
-            <section className="py-12 md:flex">
+        <main className="px-6 lg:p-0 min-h-screen">
+            <section className="pt-12 md:flex lg:pt-32">
                 {/* left / top */}
                 <HomeLeft />
                 <HomeRight />  
