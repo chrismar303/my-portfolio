@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { NavHashLink } from 'react-router-hash-link';
+import { Link } from "react-scroll";
 import SocialLinks from './SocialLinks';
 import { BiMenu } from 'react-icons/bi';
 import { MdClose } from 'react-icons/md'
@@ -33,15 +33,9 @@ const AppNavbar = () => {
                     </div>
                     {/* menu content */}
                     <h5 className="text-lg font-bold text-red-900 lg:hidden">Chrismar</h5>
-                    <div className="flex flex-col  gap-12  lg:flex-row lg:gap-8 text-red-500">
-                        <Link text="Home" href="#home"  onClick={closeMenu}/>
-                        <Link text="About" href="#about"  onClick={closeMenu} />
-                        <Link text="Projects" href="#projects" onClick={closeMenu} />
-                        <Link text="Contact" href="#contact" onClick={closeMenu} /> 
-                    </div>
+                    <AppLinks onClick={closeMenu} />
                     {/* menu social media links */}
                     <div className="text-lg lg:hidden"><SocialLinks spacing={2} /></div>
-                    
                 </div>
             </nav>
         </header>
@@ -49,11 +43,23 @@ const AppNavbar = () => {
    
 }
 
-function Link({ text, href, exact, onClick }) {
+
+function AppLinks({ onClick }) {
     return (
-         <NavHashLink smooth={true} to={href} exact={exact || false} activeClassName="border-b-2 border-red-500 lg:bg-red-500 lg:text-white" onClick={onClick} className="w-full pb-4 px-3  text-center hover:text-white hover:bg-red-600 rounded-sm transition ease-in lg:px-4 lg:py-3">
+        <div className="flex flex-col gap-6  lg:flex-row lg:gap-8 text-red-500">
+            <AppLink text="Home" to="home"  onClick={onClick}/>
+            <AppLink text="About" to="about"  onClick={onClick} />
+            <AppLink text="Projects" to="projects" onClick={onClick} />
+            <AppLink text="Contact" to="contact" onClick={onClick} /> 
+        </div>
+    )
+}
+
+function AppLink({ text, to, onClick }) {
+    return (
+        <Link to={to} spy={true} smooth={true} offset={0} duration={1250} onClick={onClick} activeClass="border-b-2 border-red-500 lg:bg-red-500 lg:text-white" className="w-full py-4 px-3  text-center hover:text-white hover:bg-red-600 rounded-sm transition ease-in duration-300 cursor-pointer lg:px-4 lg:py-3">
             {text}
-        </NavHashLink>
+        </Link>
     )
 }
 

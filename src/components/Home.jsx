@@ -1,4 +1,4 @@
-import { NavHashLink } from 'react-router-hash-link';
+import { Link } from "react-scroll";
 import meImg from '../assets/images/me.jpg';
 import SocialLinks from './SocialLinks';
 import { FaMapMarkerAlt, FaEnvelope, FaPhoneAlt } from 'react-icons/fa';
@@ -92,12 +92,12 @@ function HomeSocials() {
 function HomeButtons() {
     return (
         <div className="flex mt-6">
-            <a class="block px-6 py-2 text-xs font-semibold text-white transition-colors duration-200 transform bg-red-500 rounded-md hover:bg-red-400">
+            <a class="block px-6 py-2 text-xs font-semibold text-white bg-red-500 rounded-md hover:bg-red-400 lg:transform lg:hover:scale-110 lg:duration-500">
                 Resume
             </a>
-            <NavHashLink to={"/#projects"} className="block px-6 py-2 mx-4 text-xs font-semibold text-red-600 transition-colors duration-200 transform border border-red-600 rounded-md hover:bg-red-500 hover:text-white">
+            <Link to={"projects"} spy={true} smooth={true} offset={0} duration={1250} className="block px-6 py-2 mx-4 text-xs font-semibold text-red-600  border border-red-600 rounded-md hover:bg-red-500 hover:text-white cursor-pointer lg:transform lg:hover:scale-110 lg:duration-500">
                 Projects
-            </NavHashLink>
+            </Link>
         </div>
     )
 }
