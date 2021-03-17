@@ -1,14 +1,15 @@
-import { NavLink } from 'react-router-dom';
+import { NavHashLink } from 'react-router-hash-link';
 import backgroundImg from '../assets/images/landing.jpg';
 import SocialLinks from './SocialLinks';
 import { FaMapMarkerAlt, FaEnvelope, FaPhoneAlt } from 'react-icons/fa';
 
 const Home = () => {
     return (
-        <main className="px-6 border-b-2 lg:p-0 min-h-screen">
+        <main id="home" className="px-6 border-b-2 lg:p-0 min-h-screen">
             <section className="pt-12 md:flex lg:pt-32">
                 {/* left / top */}
                 <HomeLeft />
+                {/* right / bottom */}
                 <HomeRight />  
             </section>
         </main>
@@ -37,7 +38,6 @@ function HomeLeft() {
 
 function HomeRight() {
     return (
-        /* right / bottom */
         <div className="relative w-full h-64 md:w-1/2 md:h-auto">
             <div className="absolute w-full h-full bg-black opacity-25"></div>
             <img className="w-full h-full bg-cover" src={backgroundImg} alt="beach"/>
@@ -86,12 +86,12 @@ function HomeSocials() {
 function HomeButtons() {
     return (
         <div className="flex mt-6">
-            <a class="block px-6 py-2 text-xs font-semibold text-white transition-colors duration-200 transform bg-red-600 rounded-md hover:bg-red-500">
+            <a class="block px-6 py-2 text-xs font-semibold text-white transition-colors duration-200 transform bg-red-500 rounded-md hover:bg-red-400">
                 Resume
             </a>
-            <NavLink to={"/projects"} class="block px-6 py-2 mx-4 text-xs font-semibold text-red-600 transition-colors duration-200 transform border border-red-600 rounded-md hover:bg-red-500">
+            <NavHashLink to={"/#projects"} className="block px-6 py-2 mx-4 text-xs font-semibold text-red-600 transition-colors duration-200 transform border border-red-600 rounded-md hover:bg-red-500 hover:text-white">
                 Projects
-            </NavLink>
+            </NavHashLink>
         </div>
     )
 }

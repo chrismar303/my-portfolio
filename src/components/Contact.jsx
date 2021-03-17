@@ -28,7 +28,7 @@ function ContactAlt() {
 
 function ContactForm() {
     return (
-        <main className="px-5">
+        <main id="contact" className="px-5">
             <Section title="Contact me" subtitle="Thank you for reaching out. I will respond to you as soon as possible." className="text-gray-600">
                 {/* form */}
                 <div className="container mx-auto">

@@ -3,7 +3,7 @@ import { aboutData }  from '../data';
 
 const About = () => { 
     return (
-        <main>
+        <main id="about">
             <Section title="About me">
                 {/* hero */}
                 <div className="flex flex-col mt-4 lg:mt-8 lg:flex-row">

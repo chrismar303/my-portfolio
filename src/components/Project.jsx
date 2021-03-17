@@ -5,7 +5,7 @@ import { FaTags } from 'react-icons/fa';
 const Project = () => {
 // TODO: make card have max-size
     return (
-        <main className="bg-gray-50  px-2 md:px-4">
+        <main id="projects" className="bg-gray-50  px-2 md:px-4">
             <Section title="My Projects" subtitle="My latest works. Enjoy!">
                 {/* Project Cards */}
                 <div className="grid md:grid-cols-2 lg:grid-cols-1 gap-y-4 gap-x-4 md:w-3/4 lg:w-3/4 lg:gap-8 lg:py-4 mx-auto">

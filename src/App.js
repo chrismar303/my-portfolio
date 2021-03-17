@@ -11,12 +11,7 @@ function App() {
   return (
     <Router>
       <AppNavbar></AppNavbar>
-      <Switch>
-        <Route component={Main} path='/' exact />
-        <Route component={About} path='/about' />
-        <Route component={Project} path='/projects' />
-        <Route component={Contact} path='/contact' />
-      </Switch>
+      <Route component={Main} path='/' exact />
       <Footer />
     </Router>
   );

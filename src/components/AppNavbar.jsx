@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavHashLink } from 'react-router-hash-link';
 import SocialLinks from './SocialLinks';
 import { BiMenu } from 'react-icons/bi';
 import { MdClose } from 'react-icons/md'
@@ -34,10 +34,10 @@ const AppNavbar = () => {
                     {/* menu content */}
                     <h5 className="text-lg font-bold text-red-900 lg:hidden">Chrismar</h5>
                     <div className="flex flex-col  gap-12  lg:flex-row lg:gap-8 text-red-500">
-                        <Link text="Home" href="/" exact  onClick={closeMenu}/>
-                        <Link text="About" href="/about"  onClick={closeMenu} />
-                        <Link text="Projects" href="/projects" onClick={closeMenu} />
-                        <Link text="Contact" href="/contact" onClick={closeMenu} /> 
+                        <Link text="Home" href="#home"  onClick={closeMenu}/>
+                        <Link text="About" href="#about"  onClick={closeMenu} />
+                        <Link text="Projects" href="#projects" onClick={closeMenu} />
+                        <Link text="Contact" href="#contact" onClick={closeMenu} /> 
                     </div>
                     {/* menu social media links */}
                     <div className="text-lg lg:hidden"><SocialLinks spacing={2} /></div>
@@ -51,9 +51,9 @@ const AppNavbar = () => {
 
 function Link({ text, href, exact, onClick }) {
     return (
-         <NavLink to={href} exact={exact || false} activeClassName="border-b-2 border-red-500 lg:bg-red-500 lg:text-white" onClick={onClick} className="w-full pb-4 px-3  text-center hover:text-white hover:bg-red-600 rounded-sm transition ease-in lg:px-4 lg:py-3">
+         <NavHashLink smooth={true} to={href} exact={exact || false} activeClassName="border-b-2 border-red-500 lg:bg-red-500 lg:text-white" onClick={onClick} className="w-full pb-4 px-3  text-center hover:text-white hover:bg-red-600 rounded-sm transition ease-in lg:px-4 lg:py-3">
             {text}
-        </NavLink>
+        </NavHashLink>
     )
 }
 
