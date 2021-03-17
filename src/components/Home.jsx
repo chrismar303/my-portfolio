@@ -1,12 +1,13 @@
 import { NavHashLink } from 'react-router-hash-link';
-import backgroundImg from '../assets/images/landing.jpg';
+import meImg from '../assets/images/me.jpg';
 import SocialLinks from './SocialLinks';
 import { FaMapMarkerAlt, FaEnvelope, FaPhoneAlt } from 'react-icons/fa';
 
 const Home = () => {
     return (
-        <main id="home" className="px-6 border-b-2 lg:p-0 min-h-screen">
-            <section className="pt-12 md:flex lg:pt-32">
+        <main id="home" className="px-6 border-b-2 min-h-screen">
+            {/* <section className="py-12 lg:flex lg:py-32"> */}
+            <section className="flex flex-col h-screen  py-20 lg:py-32 lg:flex-row">
                 {/* left / top */}
                 <HomeLeft />
                 {/* right / bottom */}
@@ -18,8 +19,9 @@ const Home = () => {
 
 function HomeLeft() {
     return (
-        <div className="flex items-center justify-center w-full py-8 md:h-128 md:w-1/2">
-            <div className="max-w-xl">
+        // <div className="flex w-full items-center justify-center w-full py-8 md:h-128 md:w-1/2">
+        <div className="flex flex-1 w-full items-center justify-center w-full">
+            <div>
                 {/* Hero  */}
                 <HomeHero />
 
@@ -38,9 +40,13 @@ function HomeLeft() {
 
 function HomeRight() {
     return (
-        <div className="relative w-full h-64 md:w-1/2 md:h-auto">
-            <div className="absolute w-full h-full bg-black opacity-25"></div>
-            <img className="w-full h-full bg-cover" src={backgroundImg} alt="beach"/>
+        // <div className="flex justify-center relative w-full md:w-1/2 md:h-full">
+        <div className="flex flex-col items-center py-8 md:py-4 flex-1 h-full  justify-center relative w-full ">
+            {/* <div className="absolute w-full h-full bg-black opacity-25"></div> */}
+            <div className="rounded-full overflow-hidden">
+                <img className="h-40 md:h-64 lg:h-96 object-scale-down" src={meImg} alt="beach"/>
+            </div>
+            <div><h3>me</h3></div>
         </div>
     )
 }
