@@ -69,7 +69,7 @@ function ProjectFooter({ tags }) {
     return (
         <div className="border-t border-gray-200 px-3 py-1 mt-2 bg-gray-50">
             <div className="mb-1 flex items-center gap-2 text-xs text-gray-400">
-                <h4>Tags</h4>
+                <h4>Technologies</h4>
                 <span>{<FaTags />}</span>
             </div>
             <div className="flex text-xs gap-x-4 gap-y-2 py-1 overflow-x-auto">
