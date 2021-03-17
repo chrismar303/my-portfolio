@@ -1,7 +1,7 @@
-import Home from './Home';
-import About from './About';
-import Project from './Project';
-import Contact from './Contact';
+import Home from '../sections/Home';
+import About from '../sections/About';
+import Project from '../sections/Project';
+import Contact from '../sections/Contact';
 
 const Main = () => {
     return (

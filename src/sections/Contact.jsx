@@ -1,31 +1,10 @@
-import Section from './Section';
+import Section from '../components/Section';
 const Contact = () => {
     return (
         <ContactForm />
     )
     
 }
-
-function ContactAlt() {
-    return (
-        <main className="bg-gray-50">
-            <Section title="Contact me" subtitle="Please leave me a message">
-                <div className=" flex w-full justify-center">
-                    <form className="flex-1 flex flex-col items-center shadow rounded overflow-hidden bg-white max-w-xl mx-2">
-                        <h3 className="text-xl p-4 font-semibold">Get In Touch</h3>
-                        <div className="flex flex-col gap-4 py-4 w-full px-4">
-                            <input className="shadow-sm placeholder-gray-500 rounded p-2 bg-gray-100" placeholder="NAME" />
-                            <input className="shadow-sm placeholder-gray-500 rounded p-2 bg-gray-100" placeholder="EMAIL" />
-                            <textarea className="shadow-sm placeholder-gray-500 rounded p-2 bg-gray-100" placeholder="MESSAGE" rows="5"></textarea>
-                        </div>
-                        <button className="w-full py-4 text-xl bg-red-500 text-red-200 font-semibold">SEND</button>
-                    </form>
-                </div>
-            </Section>
-        </main>
-    )
-}
-
 function ContactForm() {
     return (
         <main id="contact" className="px-5">

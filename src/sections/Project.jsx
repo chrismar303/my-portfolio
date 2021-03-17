@@ -1,4 +1,4 @@
-import Section from './Section';
+import Section from '../components/Section';
 import { projectsData } from '../data.js';
 import { FaTags } from 'react-icons/fa';
 

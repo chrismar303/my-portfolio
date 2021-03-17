@@ -1,6 +1,6 @@
 import { Link } from "react-scroll";
 import meImg from '../assets/images/me.jpg';
-import SocialLinks from './SocialLinks';
+import SocialLinks from '../components/SocialLinks';
 import { FaMapMarkerAlt, FaEnvelope, FaPhoneAlt } from 'react-icons/fa';
 
 const Home = () => {
