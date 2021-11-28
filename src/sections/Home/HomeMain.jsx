@@ -65,7 +65,7 @@ function Socials() {
 function Buttons() {
     return (
         <div className="flex mt-6">
-            <a class="block px-6 py-2 text-xs font-semibold text-white bg-red-500 rounded-md hover:bg-red-400 lg:transform lg:hover:scale-110 lg:duration-500">
+            <a href="https://drive.google.com/file/d/1znaGDPEMsCd7Pueh44wgdiE8THTIsBUk/view?usp=sharing" class="block px-6 py-2 text-xs font-semibold text-white bg-red-500 rounded-md hover:bg-red-400 lg:transform lg:hover:scale-110 lg:duration-500">
                 Resume
             </a>
             <Link to={"projects"} spy={true} smooth={true} offset={0} duration={1250} className="block px-6 py-2 mx-4 text-xs font-semibold text-red-600  border border-red-600 rounded-md hover:bg-red-500 hover:text-white cursor-pointer lg:transform lg:hover:scale-110 lg:duration-500">
