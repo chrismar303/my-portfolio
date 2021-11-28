@@ -6,15 +6,16 @@ import projectThree from './assets/images/project3.jpg';
 import projectFour from './assets/images/project4.png';
 import projectFive from './assets/images/project5.jpg';
 import aboutImage from './assets/images/about3.JPG';
-import { FaReact, FaPython, FaJsSquare, FaJs, FaNodeJs, FaJava, FaHtml5, FaCss3Alt, FaGraduationCap } from "react-icons/fa";
+import { FaReact, FaPython, FaJs, FaNodeJs, FaJava, FaHtml5, FaCss3Alt, FaGraduationCap } from "react-icons/fa";
 import { RiFilePaper2Line } from "react-icons/ri";
+import { SiCplusplus } from 'react-icons/si';
 
 //TODO : add project image overlay
 
 export const aboutData = {
     image: aboutImage,
     imageAlt: 'me',
-    body: 'My name is Christian Martinez. I graduated from the University of California, Irvine with a Bachelor of Science in Computer Science. I specialized in System and Software',
+    body: 'My name is Christian Martinez. I graduated from the University of California, Irvine with a Bachelor of Science in Computer Science. I specialized in Systems and Software. I am a first-generation college student looking to break into the Software Engineering industry.',
     education: [ 
         { title: 'University of California, Irvine', subtitle: 'B.S. Computer Science', type: 'Degree', icon: < FaGraduationCap /> },
         { title: 'React Native Course', subtitle: 'Udemy', type: 'Certificate', icon: <RiFilePaper2Line /> },
@@ -28,6 +29,7 @@ export const aboutData = {
         'HTML': { icon: <FaHtml5 />, color: 'text-red-500'},
         'CSS': { icon: <FaCss3Alt />, color: 'text-blue-700' },
         'Javascript': { icon: <FaJs />, color: 'text-yellow-200' },
+        'C++': { icon: <SiCplusplus />, color: 'text-blue-500' }
     }
 
 }
