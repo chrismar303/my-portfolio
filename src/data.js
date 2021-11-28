@@ -57,7 +57,7 @@ export const projectsData = [
         github: 'https://github.com/chrismar303',
         link: 'https://www.google.com',
         tags: ['Python'],
-        date: 'April 2021',
+        date: 'October 2021',
         image: projectThree 
     },
     { 
@@ -66,11 +66,11 @@ export const projectsData = [
         github: 'https://github.com/chrismar303',
         link: 'https://www.google.com',
         tags: ['Python', 'BeautifulSoup'],
-        date: 'July 2020',
+        date: 'November 2021',
         image: projectFour 
     },
     { 
-        title: 'Movie Tickets Link Scraper', 
+        title: 'Movie Showtimes Link Scraper', 
         description: 'A python script that saves automates the process of finding all AMC movie showtimes based on a given zip code. Ticket purchase links and showtimes are saved onto a local file.', 
         github: 'https://github.com/chrismar303',
         link: 'https://www.google.com',

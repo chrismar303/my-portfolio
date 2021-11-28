@@ -1,5 +1,8 @@
 import Section from '../components/Section';
-import { Form, FieldGroup, Field } from '../components/Inputs';
+import SocialLinks from '../components/SocialLinks';
+import { Form, FieldGroup } from '../components/Inputs';
+import { FaMapMarkerAlt, FaEnvelope, FaPhoneAlt } from 'react-icons/fa';
+
 
 const Contact = () => {
     return (
@@ -11,14 +14,32 @@ const Contact = () => {
                     <Form>
                         {/* fields */}
                         <div className="flex flex-col flex-wrap -m-2">
-                            <FieldGroup><Field name="name" type="text" /></FieldGroup>
-                            <FieldGroup><Field name="email" type="email" /></FieldGroup>
-                            <FieldGroup><Field name="message" type="textarea" /></FieldGroup>
                             <FieldGroup>
-                                <button className="flex mx-auto text-white bg-red-500 border-0 py-2 px-8 focus:outline-none hover:bg-red-600 rounded text-lg">
-                                    Send
-                                </button>
+                                <h3>
+                                    <Label title="Email" />
+                                    <Details text="Chrismar303.dev@gmail.com" icon={<FaEnvelope />} />
+                                </h3>
                             </FieldGroup>
+                            <FieldGroup>
+                                <h3>
+                                    <Label title="Phone" />
+                                    <Details text="1 555 555-555" icon={<FaPhoneAlt />} />
+                                </h3>
+                            </FieldGroup>
+                            <FieldGroup>
+                                <h3>
+                                    <Label title="Location" />
+                                    <Details text="Los Angeles and Orange County Area" icon={<FaMapMarkerAlt />} />
+                                </h3>
+                            </FieldGroup>
+                            <FieldGroup>                                    
+                                <Label title="Social Media Links" />
+                                <Details>
+                                    <SocialLinks spacing={5} />
+                                </Details>
+                            </FieldGroup>
+                            
+
                         </div>
                     </Form>
                 </div>
@@ -27,5 +48,25 @@ const Contact = () => {
     )
 }
 
+function Label({ title }) {
+    return (
+        <div className="pb-2 text-red-500">
+            <h3 className="text-lg font-bold">{title}</h3>
+        </div>
+    )
+}
+
+function Details({ text, icon, children }) {
+    return (
+        <div className="pb-3 font-light">  
+            <div className="flex items-center text-red-700 italic">
+                <span className="px-4">{icon}</span>                        
+                {text}
+            </div>  
+            {children}
+        </div>
+    )
+
+}
 
 export default Contact;
