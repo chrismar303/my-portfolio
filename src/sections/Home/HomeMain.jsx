@@ -46,7 +46,7 @@ function Details() {
     return (
         <div className="py-4 flex flex-col gap-2">
             <Detail icon={<FaPhoneAlt />} text="1 (555) 555-5555" />            
-            <Detail icon={<FaEnvelope />} text="chrismar-dev@gmail.com" />            
+            <Detail icon={<FaEnvelope />} text="chrismar303.dev@gmail.com" />            
             <Detail icon={<FaMapMarkerAlt />} text="Los Angeles & Orange Country Area" />            
         </div>
     )
