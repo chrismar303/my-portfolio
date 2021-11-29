@@ -1,7 +1,5 @@
-import beachside from './assets/images/beachside.jpg';
-// import aboutImage from './assets/images/about2.jpg';
-// import aboutImage from './assets/images/about.JPG';
 import projectOne from './assets/images/project1.png';
+import projectTwo from './assets/images/project2.png';
 import projectThree from './assets/images/project3.jpg';
 import projectFour from './assets/images/project4.png';
 import projectFive from './assets/images/project5.jpg';
@@ -37,10 +35,10 @@ export const aboutData = {
 export const projectsData = [
     { 
         title: 'COVID-19 Tracker', 
-        description: 'React Application that tracks global data pertaining to COVID-19. Also allows for country-specific inspection of data.', 
+        description: 'React Application that tracks global data pertaining to COVID-19. Also allows for country-specific inspection of data.\n', 
         github: 'https://github.com/chrismar303',
         link: 'https://covid-19-tracker-e0dc2.firebaseapp.com/',
-        tags: ['React', 'Covid API', 'New York Times API'],
+        tags: ['React', 'CovidAPI', 'NewsApi'],
         date: 'September 2020',
         image: projectOne 
     },
@@ -48,10 +46,10 @@ export const projectsData = [
         title: 'FOODAR', 
         description: 'A website that tracks a user’s list of establishments or restaurants the user would like to visit. When the logs in, establishments are listed in the order of closest proximity', 
         github: 'https://github.com/chrismar303',
-        link: 'https://www.google.com',
+        link: 'https://hidden-retreat-20671.herokuapp.com/',
         tags: ['NodeJs', 'EJS', 'HTML', 'CSS3', 'Mongoose', 'PassportJS', 'YelpAPI'],
         date: 'August 2020',
-        image: beachside 
+        image: projectTwo 
     },
     { 
         title: 'Stock ROI Projector', 
