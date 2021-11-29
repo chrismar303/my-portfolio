@@ -15,7 +15,7 @@ function Metadata({ date }) {
     return (
         <div className="flex justify-between text-xs uppercase text-gray-400">
             <span>Date: </span>
-            <span>{new Date(date).toLocaleDateString()}</span>
+            <span>{date}</span>
         </div>
     )
 }
