@@ -36,7 +36,6 @@ export const projectsData = [
     { 
         title: 'COVID-19 Tracker', 
         description: 'React Application that tracks global data pertaining to COVID-19. Also allows for country-specific inspection of data.\n', 
-        github: 'https://github.com/chrismar303',
         link: 'https://covid-19-tracker-e0dc2.firebaseapp.com/',
         tags: ['React', 'CovidAPI', 'NewsAPI'],
         date: 'September 2020',
@@ -45,7 +44,6 @@ export const projectsData = [
     { 
         title: 'FOODAR', 
         description: 'A website that tracks a user’s list of establishments or restaurants the user would like to visit. When the logs in, establishments are listed in the order of closest proximity', 
-        github: 'https://github.com/chrismar303',
         link: 'https://hidden-retreat-20671.herokuapp.com/',
         tags: ['NodeJs', 'EJS', 'HTML', 'CSS3', 'Mongoose', 'PassportJS', 'YelpAPI'],
         date: 'August 2020',
@@ -53,9 +51,8 @@ export const projectsData = [
     },
     { 
         title: 'Stock ROI Projector', 
-        description: 'A Python program that tracks the user’s Return On Investment based on the user’s selected time interval and growth expectations.', 
+        description: 'A Python program that calculates the user’s Return On Investment (ROI) based on the user’s selected time interval and growth expectations.', 
         github: 'https://github.com/chrismar303/stock_projector',
-        link: 'https://www.google.com',
         tags: ['Python'],
         date: 'October 2021',
         image: projectThree 
@@ -64,7 +61,6 @@ export const projectsData = [
         title: 'Class Tracker', 
         description: 'A python script that uses the selenium library to automate the process of checking a class’ availability status.', 
         github: 'https://github.com/chrismar303/mtsac-class-tracker',
-        link: 'https://www.google.com',
         tags: ['Python', 'BeautifulSoup', 'Selenium'],
         date: 'November 2021',
         image: projectFour 
@@ -73,7 +69,6 @@ export const projectsData = [
         title: 'Movie Showtimes Link Scraper', 
         description: 'A python script that saves automates the process of finding all AMC movie showtimes based on a given zip code. Ticket purchase links and showtimes are saved onto a local file.', 
         github: 'https://github.com/chrismar303/movie_showtimes_scraper',
-        link: 'https://www.google.com',
         tags: ['Python', 'Selenium'],
         date: 'September 2020',
         image: projectFive 

@@ -37,9 +37,12 @@ function Button({ project }) {
                     Github
                 </a>
             }
-            <a href={project.link} className="flex-1 font-semibold text-red-500 border-red-500 border rounded-sm px-4 py-2 hover:bg-red-500 hover:text-white transition ease-in" alt={project.title} target="_blank" rel="noopener noreferrer">
-                Demo
-            </a>
+            {project?.link &&
+                <a href={project.link} className="flex-1 font-semibold text-red-500 border-red-500 border rounded-sm px-4 py-2 hover:bg-red-500 hover:text-white transition ease-in" alt={project.title} target="_blank" rel="noopener noreferrer">
+                    Demo
+                </a>
+            }
+            
         </div>
     )
 } 
