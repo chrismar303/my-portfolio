@@ -17,13 +17,13 @@ const Contact = () => {
                             <FieldGroup>
                                 <h3>
                                     <Label title="Email" />
-                                    <Details text={personalData.email} icon={<FaEnvelope />} />
+                                    <Details text={personalData.email} linkPrefix="mailto" icon={<FaEnvelope />} />
                                 </h3>
                             </FieldGroup>
                             <FieldGroup>
                                 <h3>
                                     <Label title="Phone" />
-                                    <Details text={personalData.phone} icon={<FaPhoneAlt />} />
+                                    <Details text={personalData.phone} linkPrefix="tel" icon={<FaPhoneAlt />} />
                                 </h3>
                             </FieldGroup>
                             <FieldGroup>
@@ -56,12 +56,16 @@ function Label({ title }) {
     )
 }
 
-function Details({ text, icon, children }) {
+function Details({ text, icon, linkPrefix, children }) {
     return (
         <div className="pb-3 font-light">  
             <div className="flex items-center text-red-700 italic">
-                <span className="px-4">{icon}</span>                        
-                {text}
+                <span className="px-4">{icon}</span>      
+                {linkPrefix?
+                    <a href={`${linkPrefix}:${text}`} className="text-gray-500 hover:text-red-600 transition duration-300">{text}</a>
+                    :
+                    <span className="">{text}</span>
+                }                  
             </div>  
             {children}
         </div>
