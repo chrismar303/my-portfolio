@@ -74,3 +74,9 @@ export const projectsData = [
         image: projectFive 
     },
 ]
+
+export const personalData = {
+    phone: '1 (626) 460-0121',
+    email: 'Chrismar303.dev@gmail.com',
+    location: 'Los Angeles & Orange Country Area'
+}

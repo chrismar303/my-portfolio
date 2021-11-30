@@ -2,7 +2,7 @@ import Section from '../components/Section';
 import SocialLinks from '../components/SocialLinks';
 import { Form, FieldGroup } from '../components/Inputs';
 import { FaMapMarkerAlt, FaEnvelope, FaPhoneAlt } from 'react-icons/fa';
-
+import { personalData } from '../data';
 
 const Contact = () => {
     return (
@@ -17,19 +17,19 @@ const Contact = () => {
                             <FieldGroup>
                                 <h3>
                                     <Label title="Email" />
-                                    <Details text="Chrismar303.dev@gmail.com" icon={<FaEnvelope />} />
+                                    <Details text={personalData.email} icon={<FaEnvelope />} />
                                 </h3>
                             </FieldGroup>
                             <FieldGroup>
                                 <h3>
                                     <Label title="Phone" />
-                                    <Details text="1 555 555-555" icon={<FaPhoneAlt />} />
+                                    <Details text={personalData.phone} icon={<FaPhoneAlt />} />
                                 </h3>
                             </FieldGroup>
                             <FieldGroup>
                                 <h3>
                                     <Label title="Location" />
-                                    <Details text="Los Angeles and Orange County Area" icon={<FaMapMarkerAlt />} />
+                                    <Details text={personalData.location} icon={<FaMapMarkerAlt />} />
                                 </h3>
                             </FieldGroup>
                             <FieldGroup>                                    
