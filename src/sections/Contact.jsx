@@ -62,7 +62,7 @@ function Details({ text, icon, linkPrefix, children }) {
             <div className="flex items-center text-red-700 italic">
                 <span className="px-4">{icon}</span>      
                 {linkPrefix?
-                    <a href={`${linkPrefix}:${text}`} className="text-gray-500 hover:text-red-600 transition duration-300">{text}</a>
+                    <a href={`${linkPrefix}:${text}`} className="hover:text-gray-600 transition duration-300">{text}</a>
                     :
                     <span className="">{text}</span>
                 }                  
