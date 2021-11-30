@@ -6,7 +6,7 @@ const HomeBanner = () => {
             <div className="rounded-full overflow-hidden">
                 <img className="h-40 md:h-64 lg:h-96 object-scale-down" src={meImg} alt="beach"/>
             </div>
-            <div><h3 className="text-red-500 font-bold text-4xl">me</h3></div>
+            <div><h3 className="text-red-500 font-bold text-2xl">me</h3></div>
         </div>
     )
 }
