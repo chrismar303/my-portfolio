@@ -8,8 +8,6 @@ import { FaReact, FaPython, FaJs, FaNodeJs, FaJava, FaHtml5, FaCss3Alt, FaGradua
 import { RiFilePaper2Line } from "react-icons/ri";
 import { SiCplusplus } from 'react-icons/si';
 
-//TODO : add project image overlay
-
 export const aboutData = {
     image: aboutImage,
     imageAlt: 'me',
@@ -35,7 +33,7 @@ export const aboutData = {
 export const projectsData = [
     { 
         title: 'COVID-19 Tracker', 
-        description: 'React Application that tracks global data pertaining to COVID-19. Also allows for country-specific inspection of data.\n', 
+        description: 'A React Application that tracks global data pertaining to COVID-19. Also allows for country-specific inspection of data.\n', 
         link: 'https://covid-19-tracker-e0dc2.firebaseapp.com/',
         tags: ['React', 'CovidAPI', 'NewsAPI'],
         date: 'September 2020',
@@ -43,7 +41,7 @@ export const projectsData = [
     },
     { 
         title: 'FOODAR', 
-        description: 'A website that tracks a user’s list of establishments or restaurants the user would like to visit. When the logs in, establishments are listed in the order of closest proximity', 
+        description: 'A NodeJS Fullstack Application that tracks a user’s list of establishments or restaurants the user would like to visit. When the logs in, establishments are listed in the order of closest proximity', 
         link: 'https://hidden-retreat-20671.herokuapp.com/',
         tags: ['NodeJs', 'EJS', 'HTML', 'CSS3', 'Mongoose', 'PassportJS', 'YelpAPI'],
         date: 'August 2020',
@@ -59,7 +57,7 @@ export const projectsData = [
     },
     { 
         title: 'Class Tracker', 
-        description: 'A python script that uses the selenium library to automate the process of checking a class’ availability status.', 
+        description: 'A Python program that uses the selenium library to automate the process of checking a class’ availability status.', 
         github: 'https://github.com/chrismar303/mtsac-class-tracker',
         tags: ['Python', 'BeautifulSoup', 'Selenium'],
         date: 'November 2021',
@@ -67,7 +65,7 @@ export const projectsData = [
     },
     { 
         title: 'Movie Showtimes Link Scraper', 
-        description: 'A python script that saves automates the process of finding all AMC movie showtimes based on a given zip code. Ticket purchase links and showtimes are saved onto a local file.', 
+        description: 'A Python program that automates the process of finding all AMC movie showtimes based on a given zip code. Ticket purchase links and showtimes are saved onto a local file.', 
         github: 'https://github.com/chrismar303/movie_showtimes_scraper',
         tags: ['Python', 'Selenium'],
         date: 'September 2020',
@@ -78,5 +76,6 @@ export const projectsData = [
 export const personalData = {
     phone: '1 (626) 460-0121',
     email: 'Chrismar303.dev@gmail.com',
-    location: 'Los Angeles & Orange Country Area'
+    location: 'Los Angeles & Orange Country Area',
+    resume: 'https://drive.google.com/file/d/1TO5FoNvmtpu4y5rEPIB3Dn3rjhuT9Sgh/view?usp=sharing'
 }
