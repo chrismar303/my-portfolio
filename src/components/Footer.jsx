@@ -13,7 +13,7 @@ const Footer = () => {
                 </a>
                 <p className="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-1">
                     <a href="" className="text-gray-600 ml-1" rel="noopener noreferrer" target="_blank">
-                        © 2021 Chrismar
+                        © 2023 Chrismar
                     </a>
                 </p>
                 <div className="text-lg lg:mt-0 lg:ml-auto">
