@@ -26,3 +26,11 @@ body {
 .home-name {
     font-size: 150px;
 }
+
+.bullet-point-list {
+    list-style-type: "▶  ";
+}
+
+.bullet-point-list > li::marker {
+    color: red;
+}
