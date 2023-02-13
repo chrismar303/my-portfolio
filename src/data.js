@@ -12,7 +12,10 @@ import { SiCplusplus } from 'react-icons/si';
 export const aboutData = {
     image: aboutImage,
     imageAlt: 'me',
-    body: 'My name is Christian Martinez. I graduated from the University of California, Irvine with a Bachelor of Science in Computer Science. I specialized in Systems and Software. I am a first-generation college student looking to break into the Software Engineering industry.',
+    body: `My name is Christian Martinez. I am a Software Engineer currently working as Full Stack Engineer.
+        I accidentally entered the Web Development industry in 2021 but found a passion for creating amazing things for the web!
+        I am a first-generation university graduate from the University of California.
+        I graduated with my Bachelor of Science in Computer Science with a specialization in Systems and Software.`,
     education: [ 
         { title: 'University of California, Irvine', subtitle: 'B.S. Computer Science', type: 'Degree', icon: < FaGraduationCap /> },
         { title: 'React Native Course', subtitle: 'Udemy', type: 'Certificate', icon: <RiFilePaper2Line /> },
