@@ -18,7 +18,7 @@ const Experience = () => {
                         <li>Developed Frontend user-facing applications and features</li>
                         <li>Developed and designed backend components</li>
                         <li>Built a Database backup service on a Docker Container and saved those backup to an Azure CDN</li>
-                        <li>Collaborated on an Agile team of 7 and helped design and develop features based on user stories, requirements, and design requirements</li>
+                        <li>Collaborated on an Agile team of 7 and helped design and develop features based on user stories, requirements, and design specifications</li>
                     </ul>
                     <div className="mt-8">
                         <h4 class="font-semibold text-gray-500 mb-4">Technologies</h4>

@@ -90,5 +90,5 @@ export const personalData = {
     phone: '1 (626) 460-0121',
     email: 'Chrismar303.dev@gmail.com',
     location: 'Los Angeles & Orange Country Area',
-    resume: 'https://drive.google.com/file/d/1gnVhWRiFhPKYBLxYRMgIA0nLIhJ-sjth/view?usp=sharing'
+    resume: 'https://drive.google.com/file/d/1GWUC3SYNMRDMU8ccW7ujJmn5n0fGlWbd/view?usp=sharing'
 }
