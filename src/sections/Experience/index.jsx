@@ -6,7 +6,7 @@ const Experience = () => {
     return (
         <main id="experience" className="flex flex-col justify-center items-center bg-gray-50">
             <Section title="Relevant Experience" subtitle="Where I am at!">
-                <div className="w-3/5">
+                <div className="md:w-3/5 w-4/5">
                     <h2 className="font-bold mb-0"><span className="text-lg">Software Engineer - Full Stack Engineer</span>
                         <span className="text-red-500"> @ Applied Medical:
                             <span className="italic"> A Next Generation Medical Company</span>
