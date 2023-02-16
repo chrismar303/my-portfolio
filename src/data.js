@@ -29,8 +29,8 @@ export const aboutData = {
         'Python' : { icon: <FaPython />, color: 'text-yellow-400'},
         'Node': { icon: <FaNodeJs />, color: 'text-green-500' },
         'HTML': { icon: <FaHtml5 />, color: 'text-red-500'},
-        'CSS': { icon: <FaCss3Alt />, color: 'text-blue-700' },
-        'C++': { icon: <SiCplusplus />, color: 'text-blue-500' }
+        'CSS': { icon: <FaCss3Alt />, color: 'text-blue-700' }
+        // 'C++': { icon: <SiCplusplus />, color: 'text-blue-500' }
     }
 
 }
